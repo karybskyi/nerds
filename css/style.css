@@ -95,6 +95,9 @@ a{
 }
 
 .btn{
+    display: inline-block; 
+    border-radius: 3px;
+
     font:inherit;
 
     font-weight: 500;
@@ -116,12 +119,40 @@ a{
 .btn:active{
     color: #e37376;
     background-color: #d7373b;
+    /* внутренняя тень сверху c13135*/
+    box-shadow: inset 0 2px #c13135;
+}
 
-    /* внутренняя тень сверху */
+.write-us-btn{
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+}
+
+.feedback-form button{
+    display: inline-block;
+    width: 260px;
+    height: 50px;
+}
+
+.feedback-form button:active,
+.feedback-form button:focus
+{
+    outline: none;
+}
+
+.more-btn{
+    width: 160px;
+    height: 50px;
 }
 
 .order-app-btn{
     background-color: #00ca74;
+}
+
+.order-btn{
+    width: 160px;
+    height: 50px;
 }
 
 .order-app-btn:hover,
@@ -132,10 +163,9 @@ a{
 .order-app-btn:active{
     color: #4dc491;
     background-color: #00aa62;
-    
-    /* внутренняя тень сверху */
+    /* внутренняя тень сверху #009958*/
+    box-shadow: inset 0 2px 0 #009958;
 }
-
 
 .order-presentation-btn{
     background-color: #efc84a;
@@ -149,24 +179,35 @@ a{
 .order-presentation-btn:active{
     color: #edc265;
     background-color: #e5a722;
-    
-    /* внутренняя тень сверху */
+    /* внутренняя тень сверху ce961f*/
+    box-shadow: inset 0 2px 0 #ce961f;
 }
 
 .filter-btn{
+    width: 260px;
+    height: 50px;
+
     color: #000;
     background-color: #eee;
 }
 
 .filter-btn:focus,
 .filter-btn:hover{
-    background-color: #e6e6e6;
+    background-color: #dfdfdf;
+    outline: none;
 }
 
-.filter-btn:active{
-    color: #a7a7a7;
-    background-color: #dcdcdc;
+.filter-btn:active
+{
+    color: #959595;
+    background-color: #d5d5d5;
     /* внутренняя тень сверху */
+    box-shadow: inset 0 2px 0 #bfbfbf;
+}
+
+
+.filter fieldset{
+    border: none;
 }
 
 .catalog-list{
@@ -178,23 +219,49 @@ a{
 }
 
 .pagination-item a{
-    display: inline-block;
+    display: block;
     width: 50px;
     height: 50px;
 
     color: #000;
-    font-weight: 500;
+
+    vertical-align: middle;
+    text-align: center;
+
     background-color: #eee;
-    border: 2px solid #eee;
+    
     border-radius: 3px;
 }
 
-.pagination-item-current a{
-    background-color: transparent;
+.pagination-item a:hover,
+.pagination-item a:focus{
+    background-color: #dfdfdf;
+    outline: none;
 }
+
+.pagination-item a:active
+{
+    color: #959595;
+    background-color: #d5d5d5;
+    /* внутренняя тень сверху */
+    box-shadow: inset 0 2px 0 #bfbfbf;
+}
+
 
 .pagination-item-next a{
     width: 260px;
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active{
+    box-sizing: border-box;
+
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #dbdbdb;
+    box-shadow: none;
 }
 
 .about-us h3{
@@ -264,8 +331,9 @@ a{
     border-radius: 3px;
 }
 
-.filter-options-list{
+.filter ul{
     list-style: none;
+    line-height: 20px;
 }
 
 .filter-option input{
@@ -273,7 +341,6 @@ a{
 }
 
 .filter-option label{
-    line-height: 20px;
     color: #283136;
 }
 
@@ -288,14 +355,24 @@ a{
 
 .sorting-options-list{
     list-style: none;
+    line-height: 18px;
 }
 
-.sorting-option-item{
+.sorting-option-item a{
     font-size: 14px;
-    line-height: 18px;
     color: #000;
     opacity: 0.3;
     text-transform: uppercase;
+}
+
+.sorting-option-item a:hover,
+.sorting-option-item a:focus{
+    opacity: 0.6;
+}
+
+.sorting-option-item a:active,
+.current-sorting-option a{
+    opacity: 1;
 }
 
 .catalog-item-title{
@@ -313,10 +390,6 @@ a{
     color: #666;
 }
 
-
-.current-sorting-option{
-    opacity: 1;
-}
 
 .contacts{
     /* ? */
