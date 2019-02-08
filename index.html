@@ -14,15 +14,17 @@
                 <a class="main-header-logo">
                     <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии &#171Нёрдс&#187">
                 </a>
-                <ul class="site-navigation">
-                    <li class="site-navigtion-current"><a href="#">Студия</a></li>
-                    <li><a href="#">Клиенты</a></li>
-                    <li><a href="catalog.html">Магазин</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-                <ul class="user-navigation">
-                    <li><a class="cart-link" href="#">Корзина</a></li>
-                </ul>
+                <div>
+                    <ul class="site-navigation">
+                        <li class="site-navigtion-current"><a href="#">Студия</a></li>
+                        <li><a href="#">Клиенты</a></li>
+                        <li><a href="catalog.html">Магазин</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <ul class="user-navigation">
+                        <li><a class="cart-link" href="#">Корзина</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
@@ -32,30 +34,45 @@
             <!-- доработать css когда раберусь как делать слайдер от сих -->
             <section class="features">
                 <h2 class="visually-hidden">Преимущества</h2>
-                <div class="features-wrapper">
+                <!-- <div class="features-wrapper"> -->
                     <ul class="features-slider">
                         <li class="feature-slide">
-                            <h3 class="slide-header">Долго, дорого,<br>
-                                скурпулезно
-                            </h3>
-                            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-                            <a href="#" class="btn more-btn">Узнать больше</a>
-                        </li>
-                        <li class="feature-slide">
-                            <h3 class="slide-header">Любим математику<br>
-                                как никто другой
-                            </h3>
-                            <p>Никакого креатива, только математические формулы.</p>
+                            <div class="feature-text">
+                                <h3 class="slide-header">Долго, дорого,<br>
+                                    скурпулезно
+                                </h3>
+                                <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
                                 <a href="#" class="btn more-btn">Узнать больше</a>
+                            </div>
+                            <div class="feature-image">
+                                <img src="img/slide1.png"  width="698" height="413" alt="Слайд 1">
+                            </div>
                         </li>
-                        <li class="feature-slide">
-                            <h3 class="slide-header">Только ночь,<br>
-                                только хардкор</h3>
-                            <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-                            <a href="#" class="btn more-btn">Узнать больше</a>
+                        <li class="feature-slide visually-hidden">
+                            <div class="feature-text">
+                                <h3 class="slide-header">Любим математику<br>
+                                    как никто другой
+                                </h3>
+                                <p>Никакого креатива, только математические формулы.</p>
+                                <a href="#" class="btn more-btn">Узнать больше</a>
+                            </div>
+                            <div class="feature-image">
+                                <img src="img/slide2.png"  width="698" height="413" alt="Слайд 2">
+                            </div>
+                        </li>
+                        <li class="feature-slide visually-hidden">
+                            <div class="feature-text">
+                                <h3 class="slide-header">Только ночь,<br>
+                                    только хардкор</h3>
+                                <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+                                <a href="#" class="btn more-btn">Узнать больше</a>
+                            </div>
+                            <div class="feature-image">
+                                <img src="img/slide3.png"  width="698" height="413" alt="Слайд 3">
+                            </div>
                         </li>    
                     </ul>
-                </div>    
+                <!-- </div>     -->
             </section>
             <!-- до сих -->
 
@@ -86,7 +103,7 @@
             <section class="about-us">
                 <h2 class="visually-hidden">О нас</h2>
                 
-                <div class="two-columned">
+                <div class="two-columned upper-row">
                     <div>
                         <h3>
                             Мы - маленькая, но гордая<br>
@@ -117,11 +134,11 @@
                         <ul class="we-accurate-list">
                             <li class="we-accurate-item">
                                 <b>146<sup>%</sup></b> 
-                                уровень самоотдачи
+                                Уровень самоотдачи
                             </li>
                             <li class="we-accurate-item">
                                 <b>100<sup>%</sup></b>
-                                соблюдение сроков
+                                Соблюдение сроков
                             </li>
                             <li class="we-accurate-item">
                                 <b>50<sup>%</sup></b>
