@@ -38,20 +38,24 @@
                     <h2 class="visually-hidden">Фильтр товаров</h2>
                     <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
                     
-                        <fieldset>
+                        <fieldset class="range-filter">
                             <legend>Стоимость:</legend>
-                            <div class="price-ranger">
-                                <!-- ползунки цены-->
+                            <div class="price-ranger"><!-- "range-controls" -->
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min"></div>
+                                <div class="toggle toggle-max"></div>
                             </div>
-                            <div class="price-items-holder">
-                            <p class="range-item">
-                                <label for="min-price">От</label>
-                                <input id="min-price" type="number" placeholder="0"> 
-                            </p>
-                            <p class="range-item">
-                                <label for="max-price">До</label>
-                                <input id="min-price" type="number" placeholder="15000">
-                            </p>
+                            <div class="price-items-holder"><!-- "price-controls" -->
+                                <p class="range-item">
+                                    <label for="min-price">От</label>
+                                    <input id="min-price" type="number" placeholder="0"> 
+                                </p>
+                                <p class="range-item">
+                                    <label for="max-price">До</label>
+                                    <input id="min-price" type="number" placeholder="15000">
+                                </p>
                             </div>
                         </fieldset>
                     
@@ -59,16 +63,25 @@
                             <legend>Сетка:</legend>
                             <ul class="filters-list">
                                 <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="layout-type" value="adaptive" id="adaptive-filter">
-                                        <label for="adaptive-filter">Адаптивная</label>
+                                    <label class="label-radio">
+                                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="layout-type" value="adaptive">
+                                        <span class="radio-indicator"></span>
+                                        Адаптивная
+                                    </label>
                                 </li>
                                 <li class="filter-option">
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="layout-type" value="static" id="static-filter">
-                                    <label for="static-filter">Фиксированная</label>
+                                    <label  class="label-radio">
+                                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="layout-type" value="static">
+                                        <span class="radio-indicator"></span>
+                                        Фиксированная
+                                    </label>
                                 </li>
                                 <li class="filter-option">
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="layout-type" value="fluid" id="fluid-filter">
-                                    <label for="fluid-filter">Резиновая</label>
+                                    <label class="label-radio">
+                                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="layout-type" value="fluid">
+                                        <span class="radio-indicator"></span>
+                                        Резиновая
+                                    </label>
                                 </li>
                             </ul>
                         </fieldset>
@@ -77,24 +90,39 @@
                             <legend>Особенности:</legend>
                             <ul class="filters-list">
                                 <li class="filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="slider-filter">
-                                    <label for="slider-filter">Слайдер</label>
+                                    <label class="label-checkbox">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider">
+                                        <span class="checkbox-indicator"></span>
+                                        Слайдер
+                                    </label>
                                 </li>
                                 <li class="filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="advantages-section" id="advantages-section-filter">
-                                    <label for="advantages-section-filter">Блок преимуществ</label>        
+                                    <label class="label-checkbox">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="advantages-section">
+                                        <span class="checkbox-indicator"></span>
+                                        Блок преимуществ
+                                    </label>        
                                 </li>
                                 <li class="filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news-section" id="news-section-filter">
-                                    <label for="news-section-filter">Новости</label>
+                                    <label class="label-checkbox">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news-section">
+                                        <span class="checkbox-indicator"></span>
+                                        Новости
+                                    </label>
                                 </li>
                                 <li class="filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="gallery-filter">
-                                    <label for="gallery-filter">Галерея</label>
+                                    <label class="label-checkbox">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery">
+                                        <span class="checkbox-indicator"></span>
+                                        Галерея
+                                    </label>
                                 </li>
                                 <li class="filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="cart" id="cart-filter">
-                                    <label for="cart-filter">Корзина</label>
+                                    <label class="label-checkbox">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="cart">
+                                        <span class="checkbox-indicator"></span>
+                                        Корзина
+                                    </label>
                                 </li>
                             </ul>
                         </fieldset>
@@ -134,7 +162,7 @@
 
                     <ul class="catalog-list">
                         <li class="catalog-item">
-                            <h3 class="catalog-header visible-catalog-header">
+                            <h3 class="catalog-header">
                                 <a href="catalog-item.html">
                                     <span class="catalog-item-title">Sedona</span>
                                 </a>
@@ -228,6 +256,7 @@
         <footer class="main-footer">
             <section class="contacts">
                 <h2 class="visually-hidden">Наши контакты</h2>
+                <div id="map" class="map-js"></div>
                 <div class="contacts-card-wrapper">
                     <div class="contacts-card">
                         <b class="company-name">Nёrds design studio</b>
@@ -238,12 +267,9 @@
                         <p class="company-phone">
                             тел. +7 (812) 275-75-75
                         </p>
-        
                         <a href="#" class="btn write-us-btn">Напишите нам</a>
                     </div>
                 </div>
-                <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.32085871557288!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1549242967546" width="100%" height="416" style="border:0" allowfullscreen></iframe>
-                        <!-- backgroundimage = map -->
             </section>
         
             <div class="footer-socials">
@@ -294,5 +320,9 @@
             </form>
             <button class="modal-close" type="button">Закрыть</button>
         </section>
+
+        <script type="text/javascript" src="js/script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    
     </body>
 </html>
