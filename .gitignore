@@ -6,3 +6,4 @@ config
 *.swn
 thumbs.db
 .ssh/
+img/

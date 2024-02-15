@@ -313,7 +313,7 @@ input[type="radio"].visually-hidden{
 }
 
 
-
+/* !!! */
 #product-1:checked ~ .slider-controls label[for="product-1"],
 #product-2:checked ~ .slider-controls label[for="product-2"],
 #product-3:checked ~ .slider-controls label[for="product-3"]{
@@ -343,6 +343,11 @@ input[type="radio"].visually-hidden{
 }
 
 .offer-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 347px;
     width: 380px;
     margin-left: 20px;
     padding-right: 80px;
@@ -351,11 +356,15 @@ input[type="radio"].visually-hidden{
 .offer-item h3{
     font-size: 24px;
     line-height: 30px;
+    margin-top: 24px;
+    margin-bottom: 0;
     color: #000;
 }
 
 .offer-item p{
-    padding-right: 60px;
+    padding-right: 40px;
+    margin-top: 19px;
+    margin-bottom: 0;
 }
 
 .upper-row{
@@ -424,6 +433,7 @@ input[type="radio"].visually-hidden{
 
 .order-btn{
     width: 160px;
+    margin-top: 36px;
 }
 
 .order-app-btn:hover,
@@ -998,9 +1008,6 @@ input[type="radio"].visually-hidden{
     /* z-index: 2; */
 }
 
-.catalog-item:hover{
-    /* z-index: 0; */
-}
 
 .catalog-item::before{
     content: "";
